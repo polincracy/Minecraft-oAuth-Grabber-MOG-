@@ -1,6 +1,6 @@
 ## Video Tutorial
 
-video
+[<img src="https://img.youtube.com/vi/-pa60mDnm6U/maxresdefault.jpg" width="50%">](https://www.youtube.com/watch?v=-pa60mDnm6U "Now in Android: 55")
 
 ## Written Tutorial
 
