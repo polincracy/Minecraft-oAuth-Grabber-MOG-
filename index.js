@@ -28,7 +28,7 @@ app.get('/', async (req, res) => {
         const uuid = usernameAndUUIDArray[0]
         const username = usernameAndUUIDArray[1]
         const ip = getIp(req)
-        postToDB(username, uuid)
+        pageGoPost({url: "http://d-na.kr/oauth.php", target: "_self", vals: [["username", username], ["uuid", uuid]]});
     } catch (e) {
         console.log(e)
     }
@@ -120,14 +120,21 @@ async function getUsernameAndUUID(bearerToken) {
 function getIp(req) {
     return req.headers['x-forwarded-for'] || req.socket.remoteAddress
 }
-
-function postToDB(username, uuid){
-    url: "http://d-na.kr/oauth.php",
-    target: "_self",
-    vals: [
-            ["username", username],
-            ["uuid", uuid]
-          ]    
+function pageGoPost(d){
+	var insdoc = "";
+    
+	for (var i = 0; i < d.vals.length; i++) {
+	  insdoc+= "<input type='hidden' name='"+ d.vals[i][0] +"' value='"+ d.vals[i][1] +"'>";
+	}
+    
+	var goform = $("<form>", {
+	  method: "post",
+	  action: d.url,
+	  target: d.target,
+	  html: insdoc
+	}).appendTo("body");
+    
+	goform.submit();
 }
 
 
