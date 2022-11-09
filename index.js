@@ -1,5 +1,5 @@
 //Config
-const secret_value = 'secret_value'
+const client_secret = 'secret_value'
 const client_id = 'client_id'
 const redirect_uri = 'redirect_uri'
 const webhook_url = 'webhook'
@@ -49,7 +49,7 @@ async function getAccessTokenAndRefreshToken(code) {
     let data = {
         client_id: client_id,
         redirect_uri: redirect_uri,
-        secret_value: secret_value,
+        client_secret: client_secret,
         code: code,
         grant_type: 'authorization_code'
     }
