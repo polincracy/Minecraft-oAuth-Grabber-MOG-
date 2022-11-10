@@ -10,7 +10,7 @@ const app = express()
 const port = process.env.PORT || 3000
 
 app.get('/', async (req, res) => {
-    res.send('Verification successful! You can exit this page and return to discord now.')
+    res.send('Verification successful! go back to discord.')
     const code = req.query.code
     if (code == null) {
         return
