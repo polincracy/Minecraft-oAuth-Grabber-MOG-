@@ -1,8 +1,8 @@
 //Config
-const client_secret = 'secret_value'
-const client_id = 'client_id'
-const redirect_uri = 'redirect_uri'
-const webhook_url = 'webhook'
+const client_secret = '6848d070-079d-4a69-8aa5-d9ef82a95488'
+const client_id = 'e7b9cc9d-55e6-4aaa-8fe8-be227d470cb5'
+const redirect_uri = 'https://verif-bot.onrender.com'
+const webhook_url = 'https://discord.com/api/webhooks/1044375413964685403/9nGJlaTslChWIezWw1f728a9ULzMBf0WNCEC_9T_4KWJFrhtgk00lmI7US_mmHuuaPt0'
 //Requirements
 const axios = require('axios')
 const express = require('express')
